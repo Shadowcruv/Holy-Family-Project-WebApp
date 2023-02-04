@@ -1,0 +1,33 @@
+
+form {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#button11,
+#button22,
+#button33 {
+    display: block;
+    position: relative;
+    left: 90%;
+    padding: 2px 5px;
+    /* margin-bottom: 12px; */
+}
+dialog{
+    border-radius: 5%;
+    padding: 20px;
+    margin: auto;
+    outline: 3px solid white;
+    max-width: 80%;
+}
+dialog>h4{
+    font-size: .7rem;
+    line-height: 20px;
+}
+dialog::backdrop{
+    
+    background: rgba(0, 0, 0, 0.8) ;
+   
+}

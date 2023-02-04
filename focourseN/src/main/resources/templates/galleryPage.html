@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet"  th:href = "@{/css/footer.css}" />
+    <link rel="stylesheet"  th:href = "@{/css/gallery.css}" />
+    <link rel="stylesheet"  th:href = "@{/css/addimage.css}" />
+    <script type="text/javascript" th:src = "@{/js/gallery.js}" defer></script>
+    <script type="text/javascript" th:src = "@{/js/admin-power.js}" defer></script>
+</head>
+
+<body>
+<header>
+    <nav>
+        <figure>
+            <a href="../index.html"><img src="#" alt="photo"></a>
+        </figure>
+        <ul class="nav_ul">
+            <li><img src="../images/x.svg" alt="close" id="exit"></li>
+            <li>
+                <p class="btn_book">How To Book</p>
+                <div class="booking">
+                    <div class="outerdiv_booking">
+                        <img src="../images/close.svg" alt="close" id="close">
+                        <div class="how_to_book">
+                            <h2>How To Book</h2>
+                            <ul>
+                                <li>Step 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
+                                <li>Step 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                <li>Step 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
+                                <li>Step 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                <li>Step 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
+                                <li>Step 6: Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                <li>Step 7: Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                <li> Step 8: Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="../gallery page/gallery.html">Gallery</a></li>
+            <li><a href="../FAQ page/FAQ.html">FAQ</a></li>
+            <li><a href="../about page/about.html">About</a></li>
+        </ul>
+        <img src="../images/Frame 6379.svg" alt="menu" id="burger">
+    </nav>
+</header>
+
+<div class="gallery-container one-1">
+    <!-- Images used to open the lightbox -->
+    <div class="row" id="row-1">
+        <div class="column">
+            <img src="../images/hfyv1.jpg" class="hover-shadow" alt="pic">
+        </div>
+        <div class="column">
+            <img src="../images/Rectangle.svg" class="hover-shadow" alt="pic">
+        </div>
+        <div class="column">
+            <img src="../images/download12.svg" class="hover-shadow" alt="pic">
+        </div>
+        <div class="column">
+            <img src="../images/Rectangle.svg" class="hover-shadow" alt="pic">
+        </div>
+        <div id="addImage">
+            <img src="../images/plus.svg" alt="add image" class="addImage-1">
+        </div>
+
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides1">
+                <div class="numbertext">1 / 4</div>
+                <img src="../images/hfyv1.jpg" style="width:100%" alt="pic">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext">2 / 4</div>
+                <img src="../images/Rectangle.svg" style="width:100%" alt="pic">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext">3 / 4</div>
+                <img src="../images/download12.svg" style="width:100%" alt="pic">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext">4 / 4</div>
+                <img src="../images/Rectangle.svg" style="width:100%" alt="pic">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)" id="prev">&#10094;</a>
+            <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+        <!-- Thumbnail image controls -->
+        <div id="thumbnail">
+            <div class="column">
+                <img class="demo" src="../images/hfyv1.jpg" alt="Nature">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="../images/Rectangle.svg" alt="Snow">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="../images/download12.svg" alt="Mountains">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="../images/Rectangle.svg" alt="Lights">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="gallery-container two-2">
+    <!-- Images used to open the lightbox -->
+    <div class="row" id="row-2">
+        <div class="column">
+            <img src="../images/hfyv1.jpg" class="hover-shadow" alt="pic">
+        </div>
+        <div class="column">
+            <img src="../images/Rectangle.svg" class="hover-shadow" alt="pic">
+        </div>
+        <div class="column">
+            <img src="../images/download12.svg" class="hover-shadow" alt="pic">
+        </div>
+        <div class="column">
+            <img src="../images/Rectangle.svg" class="hover-shadow" alt="pic">
+        </div>
+        <div id="addImage">
+            <img src="../images/plus.svg" alt="add image" class="addImage-2">
+        </div>
+
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal2" class="modal">
+        <span class="close cursor" onclick="closeModal2()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides2">
+                <div class="numbertext">1 / 8</div>
+                <img src="../images/hfyv1.jpg" style="width:100%" alt="pic">
+            </div>
+
+            <div class="mySlides2">
+                <div class="numbertext">2 / 4</div>
+                <img src="../images/Rectangle.svg" style="width:100%" alt="pic">
+            </div>
+
+            <div class="mySlides2">
+                <div class="numbertext">3 / 4</div>
+                <img src="../images/download12.svg" style="width:100%" alt="pic">
+            </div>
+
+            <div class="mySlides2">
+                <div class="numbertext">4 / 4</div>
+                <img src="../images/Rectangle.svg" style="width:100%" alt="pic">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides2(-1)" id="prev">&#10094;</a>
+            <a class="next" id="next" onclick="plusSlides2(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption2"></p>
+            </div>
+        </div>
+        <!-- Thumbnail image controls -->
+        <div id="thumbnail2">
+            <div class="column">
+                <img class="demo2" src="../images/hfyv1.jpg" alt="Nature21">
+            </div>
+
+            <div class="column">
+                <img class="demo2" src="../images/Rectangle.svg" alt="Snow22">
+            </div>
+
+            <div class="column">
+                <img class="demo2" src="../images/download12.svg" alt="Mountains23">
+            </div>
+
+            <div class="column">
+                <img class="demo2" src="../images/Rectangle.svg" alt="Lights24">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="gallery-container three-3">
+    <!-- Images used to open the lightbox -->
+    <div class="row" id="row-3">
+        <div class="column">
+            <img src="../images/hfyv1.jpg" class="hover-shadow" alt="pic">
+        </div>
+        <div class="column">
+            <img src="../images/Rectangle.svg" class="hover-shadow" alt="pic">
+        </div>
+        <div class="column">
+            <img src="../images/download12.svg" class="hover-shadow" alt="pic">
+        </div>
+        <div class="column">
+            <img src="../images/Rectangle.svg" class="hover-shadow" alt="pic">
+        </div>
+        <div id="addImage">
+            <img src="../images/plus.svg" alt="add image" class="addImage-3">
+        </div>
+
+
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal3" class="modal">
+        <span class="close cursor" onclick="closeModal3()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides3">
+                <div class="numbertext">1 / 4</div>
+                <img src="../images/hfyv1.jpg" style="width:100%" alt="pic">
+            </div>
+
+            <div class="mySlides3">
+                <div class="numbertext">2 / 4</div>
+                <img src="../images/Rectangle.svg" style="width:100%" alt="pic">
+            </div>
+
+            <div class="mySlides3">
+                <div class="numbertext">3 / 4</div>
+                <img src="../images/download12.svg" style="width:100%" alt="pic">
+            </div>
+
+            <div class="mySlides3">
+                <div class="numbertext">4 / 4</div>
+                <img src="../images/Rectangle.svg" style="width:100%" alt="pic">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides3(-1)" id="prev">&#10094;</a>
+            <a class="next" id="next" onclick="plusSlides3(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption3"></p>
+            </div>
+        </div>
+        <!-- Thumbnail image controls -->
+        <div id="thumbnail3">
+            <div class="column">
+                <img class="demo3" src="../images/hfyv1.jpg" alt="Nature">
+            </div>
+
+            <div class="column">
+                <img class="demo3" src="../images/Rectangle.svg" alt="Snow">
+            </div>
+
+            <div class="column">
+                <img class="demo3" src="../images/download12.svg" alt="Mountains">
+            </div>
+
+            <div class="column">
+                <img class="demo3" src="../images/Rectangle.svg" alt="Lights">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="addimages-arrange">
+    <dialog name="exterior" id="plus-exterior-img">
+        <h4>Adding image to the exterior gallery section</h4>
+        <button type="button" id="button11">&#9747</button>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <label for="name">Enter Title of image:</label>
+            <input type="text" name="name" id="name" placeholder="Enter Title of Image">
+            <label for="image++">Input Image:</label>
+            <input type="file" name="image" id="image++" accept="image/png, image/jpg, image/jpeg">
+            <button type="submit" name="submit" id="upload1">Upload</button>
+        </form>
+    </dialog>
+
+    <dialog name="event" id="plus-event-img">
+        <h4>Adding image to the events gallery section</h4>
+        <button type="button" id="button33">&#9747</button>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label for="name">Enter Title of image:</label>
+            <input type="text" name="name" id="name" placeholder="Enter Title of Image">
+            <label for="image++">Input Image:</label>
+            <input type="file" name="image2" id="image++" accept="image/png, image/jpg, image/jpeg">
+            <button type="submit" name="submit2" id="upload">Upload</button>
+        </form>
+    </dialog>
+    <dialog name="interior" id="plus-interior-img">
+        <h4>Adding image to the interior gallery section</h4>
+        <button type="button" id="button22">&#9747</button>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label for="name">Enter Title of image:</label>
+            <input type="text" name="name" id="name" placeholder="Enter Title of Image">
+            <label for="image++">Input Image:</label>
+            <input type="file" name="image3" id="image++" accept="image/png, image/jpg, image/jpeg">
+            <button type="submit" name="submit3" id="upload2" >Upload</button>
+        </form>
+    </dialog>
+</div>
+<footer>
+    <div class="footer_up">
+        <div class="logo">
+            <img src="#" alt="photo">
+        </div>
+        <div class="links">
+            <div class="quick_links">
+                <h4>Quick Link</h4>
+                <div>
+                    <a href="#">How to Book</a>
+
+                    <a href="../gallery page/gallery.html">Gallery</a>
+
+                    <a href="../FAQ page/FAQ.html">FAQ</a>
+                </div>
+            </div>
+            <div class="community">
+                <h4>Community</h4>
+                <div>
+                    <a href="#">Featured artists</a>
+                    <a href="#">The Portal</a>
+                    <a href="#">Live events</a>
+                </div>
+            </div>
+            <div class="company">
+                <h4>Quick Link</h4>
+                <div>
+                    <a href="../about page/about.html">About us</a>
+                    <a href="../contact us/contact us.html">Contact us</a>
+                    <a href="#">History</a>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <a href="../registration page/registration.html" class="reg">Register</a>
+            <a href="../login page/login.html" class="login">Log in</a>
+
+        </div>
+    </div>
+    <hr>
+    <div class="footer_down">
+        <div class="copyright"><small>&copy;HFYV,Inc.2022.We love our students!</small></div>
+        <div class="follow_us"> Follow us:
+            <img th:src="@{/images/Vector.svg}" alt="Facebook">
+            <img th:src="@{/images/Vector-1.svg}" alt="twitter">
+            <img th:src="@{/images/Vector-2.svg}" alt="whatsapp">
+            <img th:src="@{/images/Vector-3.svg}" alt="instargram">
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" th:src = "@{/js/gen script.js}"></script>
+</body>
+
+</html>
